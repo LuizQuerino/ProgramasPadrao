@@ -28,13 +28,17 @@ $programas =@{
 }
 
 # Exibe o menu
-Write-Host "`n=====INSTALADOR DE PROGRAMAS ====="
-foreach ($key in $programas.Keys) {
-    Write-Host "$key - $($programas[$key].Nome)"
+Write-Host "`n===== INSTALADOR DE PROGRAMAS ====="
+
+foreach ($key in ($programas.Keys | Sort-Object)) {
+    $nome = $programas[$key].Nome
+    Write-Host "$key - $nome"
 }
+
 Write-Host "99 - Instalar TODOS os programas"
 Write-Host "0  - Sair"
 Write-Host "==================================="
+
 
 # Entrada do usuário
 $selecionado=Read-Host "`nDigite o número do programa que deseja instalar"
