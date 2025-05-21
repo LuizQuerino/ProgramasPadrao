@@ -61,7 +61,7 @@ if ($selecionados -match '\b99\b') {
             $id   = $programas[[int]$opcao].Id
             if ($id -eq "ativacao") {
                 Write-Host "`n🔐 Iniciando ativacao do Windows..."
-                Start-Process powershell -ArgumentList "-NoProfile -ExecutionPolicy Bypass -Command \"irm https://get.activated.win | iex\"" -Verb RunAs
+                Start-Process powershell -ArgumentList "-NoProfile -ExecutionPolicy Bypass -Command \"irm https://get.activated.win | iex"" -Verb RunAs
                 continue
             }
             Write-Host "`n📥 Instalando $nome..."
