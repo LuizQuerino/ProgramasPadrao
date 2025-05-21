@@ -40,8 +40,8 @@ if ($selecionados -match '\b0\b') {
 if ($selecionados -match '\b99\b') {
     Write-Host "`n📦 Instalando todos os programas..."
     foreach ($item in $programas.GetEnumerator()) {
-        #$nome = $item.Value.Nome
-        #$id = $item.Value.Id
+        $nome = $item.Value.Nome
+        $id = $item.Value.Id
         Write-Host "`n📥 Instalando $nome..."
         winget install --id=$id -e --accept-source-agreements --accept-package-agreements
     }
