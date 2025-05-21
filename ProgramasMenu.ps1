@@ -63,9 +63,7 @@ if ($selecionado -match '\b99\b') {
 
                 Write-Host "`n📥 Instalando $nome..."
                 Write-Host "ID do pacote: $id"
-
-        # Simulação do comando winget (substitua por sua lógica real)
-        # winget install --id=$id -e --accept-source-agreements --accept-package-agreements
+                winget install --id=$id -e --accept-source-agreements --accept-package-agreements
     }
 }
 catch {
