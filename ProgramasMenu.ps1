@@ -75,5 +75,5 @@ catch {
 }
 
 Write-Host "`n✅ Instalação finalizada."
-Get-Variable -Scope Local
+#Get-Variable -Scope Local
 pause
